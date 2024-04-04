@@ -3,6 +3,8 @@ import Cards from './Cards'
 
 
 function Forground() {
+
+    
     const data = [
         {
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
@@ -44,11 +46,12 @@ function Forground() {
   return (
     <div>
 
-        <div className='fixed top-0 left-0 z-[3] w-full h-full  p-100 flex gap-5 flex-wrap'></div>
+        <div className='fixed top-0 left-0 z-[3] w-full h-full p-10 flex gap-10 flex-wrap'>
 
         {data.map((item, index) => (
              <Cards data = {item} />
         ))}
+        </div>
     </div>
 
   )

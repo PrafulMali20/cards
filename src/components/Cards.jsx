@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 
 function Cards({ data }) {
   return (
-    <motion.div drag className="relative z-[5]flex-shrink-0 w-60 h-72 rounded-[45px] bg-zinc-900/90 text-white px-8 py-10 overflow-hidden">
+    <motion.div drag  whileDrag={{scale:1.3}} dragElastic={.1}  dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+     className="relative flex-shrink-0 w-60 h-72 rounded-[45px] bg-zinc-900/90 text-white px-8 py-10 overflow-hidden">
       <FaRegFileAlt />
 
       <p className="text-sm mt-5 font-semibold leading-tight">{data.desc}</p>
